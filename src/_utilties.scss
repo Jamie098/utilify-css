@@ -1,0 +1,72 @@
+@use './design';
+
+// Spacing
+@each $key, $val in design.$spacing {
+  .p-#{$key} {
+    padding: $val;
+  }
+
+  .m-#{$key} {
+    margin: $val;
+  }
+
+  .g-#{$key} {
+    gap: $val;
+  }
+}
+
+// Base Layouts
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+}
+
+// Responsive Variants
+@each $label, $minWidth in design.$breakpoints {
+  @media (min-width: $minWidth) {
+    .#{$label}\:flex {
+      display: flex;
+    }
+
+    .#{$label}\:row {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .#{$label}\:col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .#{$label}\:grid {
+      display: grid;
+    }
+
+    @each $key, $val in design.$spacing {
+      .#{$label}\:p-#{$key} {
+        padding: $val;
+      }
+
+      .#{$label}\:m-#{$key} {
+        margin: $val;
+      }
+
+      .#{$label}\:g-#{$key} {
+        gap: $val;
+      }
+    }
+  }
+}

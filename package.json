@@ -1,0 +1,24 @@
+{
+  "name": "utilify-css",
+  "version": "1.0.1",
+  "main": "dist/styles.css",
+  "style": "dist/styles.css",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build:css": "sass src/styles.scss dist/styles.css --no-source-map --style=expanded",
+    "watch:css": "sass --watch src/styles.scss:dist/styles.css --no-source-map --style=expanded"
+  },
+  "keywords": [
+    "css",
+    "utilities",
+    "utilify"
+  ],
+  "author": "Jamie098",
+  "license": "ISC",
+  "description": "Tiny utility-first CSS library",
+  "devDependencies": {
+    "sass": "^1.89.2"
+  }
+}
