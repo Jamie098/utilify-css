@@ -149,4 +149,4 @@ Please follow the existing code style and add tests/examples where appropriate.
 
 ## License
 
-ICS © \Jamie098
+ICS © Jamie098
