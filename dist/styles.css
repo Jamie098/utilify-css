@@ -345,3 +345,88 @@
 .grid-cols-autofill-32 {
   grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
 }
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slide-up {
+  from {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-down {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(1rem);
+    opacity: 1;
+  }
+}
+.animate-fade-in {
+  animation-name: fade-in;
+  animation-duration: 300ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+.animate-slide-up {
+  animation-name: slide-up;
+  animation-duration: 300ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+.animate-slide-down {
+  animation-name: slide-down;
+  animation-duration: 300ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+.duration-75 {
+  animation-duration: 75ms;
+}
+
+.duration-150 {
+  animation-duration: 150ms;
+}
+
+.duration-300 {
+  animation-duration: 300ms;
+}
+
+.duration-500 {
+  animation-duration: 500ms;
+}
+
+.duration-1000 {
+  animation-duration: 1s;
+}
+
+.ease-default {
+  animation-timing-function: ease;
+}
+
+.ease-in {
+  animation-timing-function: ease-in;
+}
+
+.ease-out {
+  animation-timing-function: ease-out;
+}
+
+.ease-in-out {
+  animation-timing-function: ease-in-out;
+}
