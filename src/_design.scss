@@ -12,3 +12,12 @@ $breakpoints: (
   md: 768px,
   lg: 1024px,
 );
+
+$grid-min-sizes: (
+  '12': 12rem,
+  '14': 14rem,
+  '16': 16rem,
+  '20': 20rem,
+  '24': 24rem,
+  '32': 32rem
+);

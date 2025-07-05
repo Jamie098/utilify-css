@@ -298,3 +298,50 @@
     gap: 16rem;
   }
 }
+.grid-cols-autofit-12 {
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+}
+
+.grid-cols-autofill-12 {
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+}
+
+.grid-cols-autofit-14 {
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+}
+
+.grid-cols-autofill-14 {
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+}
+
+.grid-cols-autofit-16 {
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+.grid-cols-autofill-16 {
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+}
+
+.grid-cols-autofit-20 {
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+.grid-cols-autofill-20 {
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+}
+
+.grid-cols-autofit-24 {
+  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+}
+
+.grid-cols-autofill-24 {
+  grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+}
+
+.grid-cols-autofit-32 {
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+}
+
+.grid-cols-autofill-32 {
+  grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+}

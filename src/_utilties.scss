@@ -70,3 +70,13 @@
     }
   }
 }
+
+@each $key, $min in design.$grid-min-sizes {
+  .grid-cols-autofit-#{$key} {
+    grid-template-columns: repeat(auto-fit, minmax(#{$min}, 1fr));
+  }
+
+  .grid-cols-autofill-#{$key} {
+    grid-template-columns: repeat(auto-fill, minmax(#{$min}, 1fr));
+  }
+}
