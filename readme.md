@@ -8,11 +8,9 @@ Tiny utility-first CSS library for rapid UI development.
 - [Installation](#installation)
 - [Quick Start](#quick-start)
 - [Usage](#usage)
-
   - [Layout Utilities](#layout-utilities)
   - [Spacing Utilities](#spacing-utilities)
   - [Responsive Variants](#responsive-variants)
-
 - [Configuration](#configuration)
 - [Custom Builds](#custom-builds)
 - [Contributing](#contributing)
@@ -22,7 +20,6 @@ Tiny utility-first CSS library for rapid UI development.
 
 - **Utility-first**: Use single-purpose classes like `.p-4`, `.flex`, `.grid`.
 - **Responsive**: Mobile-first breakpoints (`sm:`, `md:`, `lg:`).
-- **Lightweight**: Minimal CSS footprint, only \~5KB gzipped.
 - **Customizable**: Adjust your design tokens in `_design.scss`.
 
 ## Installation
@@ -152,4 +149,4 @@ Please follow the existing code style and add tests/examples where appropriate.
 
 ## License
 
-MIT © \[Your Name]
+ICS © \Jamie098
