@@ -354,7 +354,7 @@
     opacity: 1;
   }
 }
-@keyframes slide-up {
+@keyframes slide-up-sm {
   from {
     transform: translateY(1rem);
     opacity: 0;
@@ -364,7 +364,7 @@
     opacity: 1;
   }
 }
-@keyframes slide-down {
+@keyframes slide-down-sm {
   from {
     transform: translateY(0);
     opacity: 0;
@@ -374,22 +374,90 @@
     opacity: 1;
   }
 }
+.animate-slide-up-sm {
+  animation-name: slide-up-sm;
+  animation-duration: 300ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+.animate-slide-down-sm {
+  animation-name: slide-down-sm;
+  animation-duration: 300ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+@keyframes slide-up-md {
+  from {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-down-md {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(2rem);
+    opacity: 1;
+  }
+}
+.animate-slide-up-md {
+  animation-name: slide-up-md;
+  animation-duration: 300ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+.animate-slide-down-md {
+  animation-name: slide-down-md;
+  animation-duration: 300ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+@keyframes slide-up-lg {
+  from {
+    transform: translateY(3rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-down-lg {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(3rem);
+    opacity: 1;
+  }
+}
+.animate-slide-up-lg {
+  animation-name: slide-up-lg;
+  animation-duration: 300ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+.animate-slide-down-lg {
+  animation-name: slide-down-lg;
+  animation-duration: 300ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
 .animate-fade-in {
   animation-name: fade-in;
-  animation-duration: 300ms;
-  animation-timing-function: ease-out;
-  animation-fill-mode: both;
-}
-
-.animate-slide-up {
-  animation-name: slide-up;
-  animation-duration: 300ms;
-  animation-timing-function: ease-out;
-  animation-fill-mode: both;
-}
-
-.animate-slide-down {
-  animation-name: slide-down;
   animation-duration: 300ms;
   animation-timing-function: ease-out;
   animation-fill-mode: both;
