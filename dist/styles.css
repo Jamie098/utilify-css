@@ -346,6 +346,11 @@
   grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
 }
 
+:root {
+  --animate-duration: 300ms;
+  --animate-easing: ease-out;
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -354,9 +359,74 @@
     opacity: 1;
   }
 }
+.animate-fade-in {
+  animation-name: fade-in;
+  animation-duration: var(--animate-duration);
+  animation-timing-function: var(--animate-easing);
+  animation-fill-mode: both;
+}
+
+.reveal-fade-in {
+  animation-name: fade-in;
+  animation-duration: var(--animate-duration);
+  animation-timing-function: var(--animate-easing);
+  animation-fill-mode: both;
+  animation-play-state: paused;
+}
+
+@keyframes slide-up-xs {
+  from {
+    transform: translateY(0.25rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-down-xs {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0.25rem);
+    opacity: 1;
+  }
+}
+.animate-slide-up-xs {
+  animation-name: slide-up-xs;
+  animation-duration: var(--animate-duration);
+  animation-timing-function: var(--animate-easing);
+  animation-fill-mode: both;
+}
+
+.animate-slide-down-xs {
+  animation-name: slide-down-xs;
+  animation-duration: var(--animate-duration);
+  animation-timing-function: var(--animate-easing);
+  animation-fill-mode: both;
+}
+
+.reveal-slide-up-xs {
+  animation-name: slide-up-xs;
+  animation-duration: var(--animate-duration);
+  animation-timing-function: var(--animate-easing);
+  animation-fill-mode: both;
+  animation-play-state: paused;
+}
+
+.reveal-slide-down-xs {
+  animation-name: slide-down-xs;
+  animation-duration: var(--animate-duration);
+  animation-timing-function: var(--animate-easing);
+  animation-fill-mode: both;
+  animation-play-state: paused;
+}
+
 @keyframes slide-up-sm {
   from {
-    transform: translateY(1rem);
+    transform: translateY(0.5rem);
     opacity: 0;
   }
   to {
@@ -370,27 +440,43 @@
     opacity: 0;
   }
   to {
-    transform: translateY(1rem);
+    transform: translateY(0.5rem);
     opacity: 1;
   }
 }
 .animate-slide-up-sm {
   animation-name: slide-up-sm;
-  animation-duration: 300ms;
-  animation-timing-function: ease-out;
+  animation-duration: var(--animate-duration);
+  animation-timing-function: var(--animate-easing);
   animation-fill-mode: both;
 }
 
 .animate-slide-down-sm {
   animation-name: slide-down-sm;
-  animation-duration: 300ms;
-  animation-timing-function: ease-out;
+  animation-duration: var(--animate-duration);
+  animation-timing-function: var(--animate-easing);
   animation-fill-mode: both;
+}
+
+.reveal-slide-up-sm {
+  animation-name: slide-up-sm;
+  animation-duration: var(--animate-duration);
+  animation-timing-function: var(--animate-easing);
+  animation-fill-mode: both;
+  animation-play-state: paused;
+}
+
+.reveal-slide-down-sm {
+  animation-name: slide-down-sm;
+  animation-duration: var(--animate-duration);
+  animation-timing-function: var(--animate-easing);
+  animation-fill-mode: both;
+  animation-play-state: paused;
 }
 
 @keyframes slide-up-md {
   from {
-    transform: translateY(2rem);
+    transform: translateY(1rem);
     opacity: 0;
   }
   to {
@@ -404,27 +490,43 @@
     opacity: 0;
   }
   to {
-    transform: translateY(2rem);
+    transform: translateY(1rem);
     opacity: 1;
   }
 }
 .animate-slide-up-md {
   animation-name: slide-up-md;
-  animation-duration: 300ms;
-  animation-timing-function: ease-out;
+  animation-duration: var(--animate-duration);
+  animation-timing-function: var(--animate-easing);
   animation-fill-mode: both;
 }
 
 .animate-slide-down-md {
   animation-name: slide-down-md;
-  animation-duration: 300ms;
-  animation-timing-function: ease-out;
+  animation-duration: var(--animate-duration);
+  animation-timing-function: var(--animate-easing);
   animation-fill-mode: both;
+}
+
+.reveal-slide-up-md {
+  animation-name: slide-up-md;
+  animation-duration: var(--animate-duration);
+  animation-timing-function: var(--animate-easing);
+  animation-fill-mode: both;
+  animation-play-state: paused;
+}
+
+.reveal-slide-down-md {
+  animation-name: slide-down-md;
+  animation-duration: var(--animate-duration);
+  animation-timing-function: var(--animate-easing);
+  animation-fill-mode: both;
+  animation-play-state: paused;
 }
 
 @keyframes slide-up-lg {
   from {
-    transform: translateY(3rem);
+    transform: translateY(1.5rem);
     opacity: 0;
   }
   to {
@@ -438,45 +540,174 @@
     opacity: 0;
   }
   to {
-    transform: translateY(3rem);
+    transform: translateY(1.5rem);
     opacity: 1;
   }
 }
 .animate-slide-up-lg {
   animation-name: slide-up-lg;
-  animation-duration: 300ms;
-  animation-timing-function: ease-out;
+  animation-duration: var(--animate-duration);
+  animation-timing-function: var(--animate-easing);
   animation-fill-mode: both;
 }
 
 .animate-slide-down-lg {
   animation-name: slide-down-lg;
-  animation-duration: 300ms;
-  animation-timing-function: ease-out;
+  animation-duration: var(--animate-duration);
+  animation-timing-function: var(--animate-easing);
   animation-fill-mode: both;
 }
 
-.animate-fade-in {
-  animation-name: fade-in;
-  animation-duration: 300ms;
-  animation-timing-function: ease-out;
+.reveal-slide-up-lg {
+  animation-name: slide-up-lg;
+  animation-duration: var(--animate-duration);
+  animation-timing-function: var(--animate-easing);
+  animation-fill-mode: both;
+  animation-play-state: paused;
+}
+
+.reveal-slide-down-lg {
+  animation-name: slide-down-lg;
+  animation-duration: var(--animate-duration);
+  animation-timing-function: var(--animate-easing);
+  animation-fill-mode: both;
+  animation-play-state: paused;
+}
+
+@keyframes slide-up-xl {
+  from {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-down-xl {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(2rem);
+    opacity: 1;
+  }
+}
+.animate-slide-up-xl {
+  animation-name: slide-up-xl;
+  animation-duration: var(--animate-duration);
+  animation-timing-function: var(--animate-easing);
   animation-fill-mode: both;
 }
 
-.duration-75 {
-  animation-duration: 75ms;
+.animate-slide-down-xl {
+  animation-name: slide-down-xl;
+  animation-duration: var(--animate-duration);
+  animation-timing-function: var(--animate-easing);
+  animation-fill-mode: both;
 }
 
-.duration-150 {
-  animation-duration: 150ms;
+.reveal-slide-up-xl {
+  animation-name: slide-up-xl;
+  animation-duration: var(--animate-duration);
+  animation-timing-function: var(--animate-easing);
+  animation-fill-mode: both;
+  animation-play-state: paused;
+}
+
+.reveal-slide-down-xl {
+  animation-name: slide-down-xl;
+  animation-duration: var(--animate-duration);
+  animation-timing-function: var(--animate-easing);
+  animation-fill-mode: both;
+  animation-play-state: paused;
+}
+
+@keyframes slide-up-2xl {
+  from {
+    transform: translateY(3rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-down-2xl {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(3rem);
+    opacity: 1;
+  }
+}
+.animate-slide-up-2xl {
+  animation-name: slide-up-2xl;
+  animation-duration: var(--animate-duration);
+  animation-timing-function: var(--animate-easing);
+  animation-fill-mode: both;
+}
+
+.animate-slide-down-2xl {
+  animation-name: slide-down-2xl;
+  animation-duration: var(--animate-duration);
+  animation-timing-function: var(--animate-easing);
+  animation-fill-mode: both;
+}
+
+.reveal-slide-up-2xl {
+  animation-name: slide-up-2xl;
+  animation-duration: var(--animate-duration);
+  animation-timing-function: var(--animate-easing);
+  animation-fill-mode: both;
+  animation-play-state: paused;
+}
+
+.reveal-slide-down-2xl {
+  animation-name: slide-down-2xl;
+  animation-duration: var(--animate-duration);
+  animation-timing-function: var(--animate-easing);
+  animation-fill-mode: both;
+  animation-play-state: paused;
+}
+
+.duration-100 {
+  animation-duration: 100ms;
+}
+
+.duration-200 {
+  animation-duration: 200ms;
 }
 
 .duration-300 {
   animation-duration: 300ms;
 }
 
+.duration-400 {
+  animation-duration: 400ms;
+}
+
 .duration-500 {
   animation-duration: 500ms;
+}
+
+.duration-600 {
+  animation-duration: 600ms;
+}
+
+.duration-700 {
+  animation-duration: 700ms;
+}
+
+.duration-800 {
+  animation-duration: 800ms;
+}
+
+.duration-900 {
+  animation-duration: 900ms;
 }
 
 .duration-1000 {

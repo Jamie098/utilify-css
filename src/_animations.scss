@@ -1,5 +1,10 @@
 @use './_design';
 
+:root {
+  --animate-duration: 300ms;
+  --animate-easing: ease-out;
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -8,6 +13,21 @@
   to {
     opacity: 1;
   }
+}
+
+.animate-fade-in {
+  animation-name: fade-in;
+  animation-duration: var(--animate-duration);
+  animation-timing-function: var(--animate-easing);
+  animation-fill-mode: both;
+}
+
+.reveal-fade-in {
+  animation-name: fade-in;
+  animation-duration: var(--animate-duration);
+  animation-timing-function: var(--animate-easing);
+  animation-fill-mode: both;
+  animation-play-state: paused;
 }
 
 @each $key, $dist in design.$translates {
@@ -37,48 +57,42 @@
 
   .animate-slide-up-#{$key} {
     animation-name: slide-up-#{$key};
-    animation-duration: 300ms;
-    animation-timing-function: ease-out;
+    animation-duration: var(--animate-duration);
+    animation-timing-function: var(--animate-easing);
     animation-fill-mode: both;
   }
 
   .animate-slide-down-#{$key} {
     animation-name: slide-down-#{$key};
-    animation-duration: 300ms;
-    animation-timing-function: ease-out;
+    animation-duration: var(--animate-duration);
+    animation-timing-function: var(--animate-easing);
     animation-fill-mode: both;
+  }
+
+  .reveal-slide-up-#{$key} {
+    animation-name: slide-up-#{$key};
+    animation-duration: var(--animate-duration);
+    animation-timing-function: var(--animate-easing);
+    animation-fill-mode: both;
+    animation-play-state: paused;
+  }
+
+  .reveal-slide-down-#{$key} {
+    animation-name: slide-down-#{$key};
+    animation-duration: var(--animate-duration);
+    animation-timing-function: var(--animate-easing);
+    animation-fill-mode: both;
+    animation-play-state: paused;
   }
 }
 
-.animate-fade-in {
-  animation-name: fade-in;
-  animation-duration: 300ms;
-  animation-timing-function: ease-out;
-  animation-fill-mode: both;
-}
-
-$durations: (
-  75: 75ms,
-  150: 150ms,
-  300: 300ms,
-  500: 500ms,
-  1000: 1s
-);
-
-$easings: (
-  default: ease,
-  in: ease-in,
-  out: ease-out,
-  'in-out': ease-in-out
-);
-
-@each $key, $time in $durations {
+@each $key, $time in design.$durations {
   .duration-#{$key} {
     animation-duration: $time;
   }
 }
 
-@each $name, $fn in $easings {
+@each $name, $fn in design.$easings {
   .ease-#{$name} {
     animation-timing-function: $fn;
   }

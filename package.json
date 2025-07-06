@@ -8,7 +8,9 @@
   ],
   "scripts": {
     "build:css": "sass src/styles.scss dist/styles.css --no-source-map --style=expanded",
-    "watch:css": "sass --watch src/styles.scss:dist/styles.css --no-source-map --style=expanded"
+    "watch:css": "sass --watch src/styles.scss:dist/styles.css --no-source-map --style=expanded",
+    "build": "npm run build:css && npm run copy:reveal",
+    "copy:reveal": "cp src/reveal.js dist/reveal.js"
   },
   "keywords": [
     "css",

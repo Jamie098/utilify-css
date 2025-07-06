@@ -60,8 +60,8 @@ Then use utilities directly in your markup:
 | Class          | CSS                       |
 | -------------- | ------------------------- |
 | `.flex`        | `display: flex;`          |
-| `.flex-row`    | `flex-direction: row;`    |
-| `.flex-col`    | `flex-direction: column;` |
+| `.row`         | `flex-direction: row;`    |
+| `.col`         | `flex-direction: column;` |
 | `.grid`        | `display: grid;`          |
 | `.inline-flex` | `display: inline-flex;`   |
 
