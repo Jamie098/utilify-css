@@ -10,6 +10,22 @@
     margin: $val;
   }
 
+  .mt-#{$key} {
+    margin-top: $val;
+  }
+
+  .mr-#{$key} {
+    margin-right: $val;
+  }
+
+  .mb-#{$key} {
+    margin-bottom: $val;
+  }
+
+  .ml-#{$key} {
+    margin-left: $val;
+  }
+
   .g-#{$key} {
     gap: $val;
   }
@@ -34,7 +50,7 @@
   display: grid;
 }
 
-// Responsive Variants
+// Responsive Base Layout Variants
 @each $label, $minWidth in design.$breakpoints {
   @media (min-width: $minWidth) {
     .#{$label}\:flex {
@@ -71,12 +87,45 @@
   }
 }
 
-@each $key, $min in design.$grid-min-sizes {
+// Sizes
+@each $key, $size in design.$sizes {
   .grid-cols-autofit-#{$key} {
-    grid-template-columns: repeat(auto-fit, minmax(#{$min}, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(#{$size}, 1fr));
   }
 
   .grid-cols-autofill-#{$key} {
-    grid-template-columns: repeat(auto-fill, minmax(#{$min}, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(#{$size}, 1fr));
   }
+
+  .w-#{$key} {
+    width: #{$size};
+  }
+
+  .h-#{$key} {
+    height: #{$size};
+  }
+}
+
+// Alignments
+.text-center {
+  text-align: center;
+}
+
+// Borders
+.rounded-full {
+  border-radius: 100%;
+}
+
+// Object
+.object-cover {
+  object-fit: cover;
+}
+
+// Shadows
+.shadow-1 {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.shadow-2 {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }

@@ -1,4 +1,5 @@
 $spacing: (
+  0: 0,
   '05': 0.5rem,
   1: 1rem,
   2: 2rem,
@@ -13,7 +14,7 @@ $breakpoints: (
   lg: 1024px,
 );
 
-$grid-min-sizes: (
+$sizes: (
   12: 12rem,
   14: 14rem,
   16: 16rem,
