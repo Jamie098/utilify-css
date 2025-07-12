@@ -320,6 +320,11 @@
   display: grid;
 }
 
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 @media (min-width: 640px) {
   .sm-flex {
     display: flex;
@@ -776,6 +781,22 @@
     gap: 24rem;
   }
 }
+.grid-cols-autofit-8 {
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+}
+
+.grid-cols-autofill-8 {
+  grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+}
+
+.w-8 {
+  width: 8rem;
+}
+
+.h-8 {
+  height: 8rem;
+}
+
 .grid-cols-autofit-12 {
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
 }
@@ -874,6 +895,14 @@
 
 .text-center {
   text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .justify-content-center {
